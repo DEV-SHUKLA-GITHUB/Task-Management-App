@@ -1,8 +1,8 @@
 # Task-Management-App 
 <br>
 Live link - https://task-management-app-1212.netlify.app/
-
-Simple Task Management Tool for tracking progress.
+<br>
+<h2>Task Management Tool for tracking progress.</h2>
 
 
 This web app is a popular task management tool. It has organised lists, for example, "BackLog", "Active", "Finished". Each list has multiple tasks. Tasks can be dragged and dropped between lists. Written in JavaScript/HTML/CSS.
