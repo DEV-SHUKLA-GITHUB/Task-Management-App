@@ -7,7 +7,10 @@ This web app is a popular Todo App. It has organised lists, for example, "Todo T
 
 
 
-https://user-images.githubusercontent.com/96439384/216897954-98a8d940-63cc-4f62-a324-f19521ece3f0.mp4
+
+
+https://user-images.githubusercontent.com/96439384/216899972-9357caaf-0694-49b0-8ab8-f838264ba335.mp4
+
 
 
 
