@@ -5,6 +5,7 @@
 }
 body {
   min-height: 100vh;
+  background: url("./todo\ background.png.jpg");
 }
 .container {
   display: flex;
@@ -13,7 +14,15 @@ body {
   margin-left: 15%;
   justify-content: center;
 }
+.save{
+  font-size: 8px;
+}
+.btn{
+  height: 10px;
+  width: 10px;
+  background-color: aqua;
 
+}
 .task-container {
   min-height: 60vh;
   width: 30%;
@@ -66,4 +75,62 @@ h3 {
   position: absolute;
   right: -20px;
   top: -20px;
+}
+#save{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+}
+
+
+
+#save {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 250px;
+  height: 70px;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid rgb(30, 205, 151);
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  font-size: 1rem;
+  color:black;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+#save:hover {
+  color: rgba(255, 255, 255, 1);
+  background: rgb(30, 205, 151);
+}
+
+#save:active {
+  border: 2px solid rgba(33, 224, 163, 1);
+  background: rgba(33, 224, 163, 1);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+@media only screen and (max-width: 600px) {
+  .task-container{
+    width: 135%;
+    margin: 20px 0;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      padding: 10px;
+    }
 }

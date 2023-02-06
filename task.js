@@ -1,4 +1,5 @@
-let addTask = document.getElementsByClassName("add-task"); //button
+let addTask = document.getElementsByClassName("task"); //button
+let saveTask = document.getElementsByClassName("save"); //button
 let taskContainers = document.getElementsByClassName("task-container"); //taskContainer 1/2/3
 const colors = [
   "#76E4F7",
@@ -16,7 +17,7 @@ const colors = [
   "#0987A0",
   "#FEB2B2",
 ];
-
+todos = JSON.parse(localStorage.getItem("todos")) || [];
 let draggedItem = null; //pointer for cards
 function randomColor() {
   const color = colors[Math.floor(Math.random() * colors.length)];
@@ -27,20 +28,26 @@ function randomColor() {
 for (task of addTask) {
   task.addEventListener("click", function clickHandler(event) {
     event.preventDefault();
-    //   const taskItems = document.querySelector(".task-items");
-    const newTask = document.createElement("textarea");
+    let newTask = document.createElement("textarea");
     newTask.setAttribute("draggable", "true");
-    newTask.innerText = "Add your notes here";
+    newTask.placeholder = "Double click to Add your notes here";
     newTask.readOnly = true;
     newTask.classList.add("note");
     newTask.addEventListener("dblclick", () => {
       newTask.readOnly = false;
     });
-    // newTask.setAttribute("id", "task");
     newTask.setAttribute("style", "resize: none");
     event.target.parentElement.appendChild(newTask);
     newTask.style.backgroundColor = `${randomColor()}`;
     newTask.addEventListener("dragstart", dragStart);
+    todos.push(newTask.value);
+    function saveContent() {
+      localStorage.setItem(
+        `${new Date().getTime()}`,
+        JSON.stringify(newTask.value)
+      );
+    }
+    document.getElementById("save").addEventListener("click", saveContent);
   });
 }
 let notes = document.getElementsByClassName("note"); //task
@@ -50,7 +57,6 @@ for (note of notes) {
 }
 
 function dragStart(e) {
-  // e.preventDefault();
   draggedItem = this;
   setTimeout(() => {
     this.style.display = "none";
